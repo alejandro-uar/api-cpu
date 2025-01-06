@@ -15,7 +15,7 @@ export class AmdService {
         return result
     }
 
-    async createCpuService(data:any){
+    async createCpuService(data:Partial<Cpu>){
         const result = await this.cpuRepository.save(data)
         return result
     }

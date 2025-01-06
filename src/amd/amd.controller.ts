@@ -1,5 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AmdService } from './amd.service';
+import { CreateCpuDto } from './dtos/create.dto';
 
 @Controller('amd')
 export class AmdController {
@@ -11,7 +12,7 @@ export class AmdController {
   }
 
   @Post()
-  async createCpu(@Body() data:any){
+  async createCpu(@Body() data:CreateCpuDto){
     return await this.amdService.createCpuService(data)
   }
 }
